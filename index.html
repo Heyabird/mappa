@@ -18,16 +18,16 @@
 
     // Lets put all our map options in a single object
     const options = {
-        lat: 0,
-        lng: 0,
-        zoom: 4,
+        lat: 61.3,
+        lng: 23.4,
+        zoom: 1,
         style: "http://{s}.tile.osm.org/{z}/{x}/{y}.png"
     }
 
     // p5.js setup
     function setup(){
         // Create a canvas 640x640
-        canvas = createCanvas(640,640); 
+        canvas = createCanvas(1200,640); 
         // Add a grey background
         // background(100);
 
@@ -40,18 +40,72 @@
 
         // Only redraw the point when the map changes
         myMap.onChange(drawPoint);
+
+        angleMode(DEGREES);
     }
 
-    function draw(){
-    }
+  function draw() {
+    // background(255);
+
+}
+
+let angle = 0
 
     function drawPoint(){
         clear();
         // Every Frame, get the canvas position 
         // for the latitude and longitude of Nigeria
-        const nigeria = myMap.latLngToPixel(11.396396, 5.076543); 
+        const vienna = myMap.latLngToPixel(48.21, 16.37); 
         // Using that position, draw an ellipse
-        ellipse(nigeria.x, nigeria.y, 20, 20);
+        ellipse(vienna.x, vienna.y, 20, 20);
+
+        translate(200, 200);
+        rotate(angle);
+        stroke(0);
+
+        //line
+        strokeWeight(6);
+        stroke(250, 20, 40);
+        // translate(100, 100);
+        line(0, 0, 0, 200);
+        strokeWeight(4);
+
+        //shape
+        for (let i=0; i<5; i++) {
+          //pink shape 1
+          fill(250, 128, 114); // salmon
+          // rect(10, 10, 100, 50);
+          beginShape();
+            curveVertex(0, 0);    // first control point
+            curveVertex(0, 0);    // anchor 1
+            curveVertex(20, 5);   // anchor 2
+            curveVertex(20, 5);   // second control point
+            curveVertex(23, 22);  // anchor 1
+            curveVertex(40, 45);  // anchor 2
+            curveVertex(50, 50);  // third control point
+            curveVertex(40, 50);  // anchor 1
+            curveVertex(15, 45);  // anchor 2
+            curveVertex(-10, 40); // fourth control point
+            curveVertex(-15, 30); // anchor 1
+            curveVertex(-10, 15); // anchor 2
+            curveVertex(0, 0);    // fifth control point
+            curveVertex(0, 0);    // anchor 1
+          endShape();
+
+          //white shape 1
+          fill(250);
+          beginShape();
+            curveVertex(20, 5);   // second control point
+            curveVertex(23, 22);  // anchor 1
+            curveVertex(40, 45);  // anchor 2
+            curveVertex(50, 50);  // third control point
+            curveVertex(100, 35);
+            curveVertex(100, 29);
+            curveVertex(20, 5);
+            curveVertex(20, 5);
+          endShape();
+          rotate(360/4); 
+      }
     }
     </script>
 </body>
