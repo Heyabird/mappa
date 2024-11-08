@@ -1,0 +1,53 @@
+{
+    "description": "List of Nordic capital cities, their flag colors, and their coordinates",
+    "cities": [
+      {
+        "name": "Helsinki",
+        "lat": 60.170,
+        "long": 24.938,
+        "flag_colors": ["#3f63ad", "#ffffff"]
+      },
+      {
+        "name": "Stockholm",
+        "lat": 59.329,
+        "long": 18.069,
+        "flag_colors": ["#0c5093", "#fdce0c"]
+      },
+      {
+        "name": "Oslo",
+        "lat": 59.914,
+        "long": 10.752,
+        "flag_colors": ["#ec2127", "#2c3073", "#ffffff"]
+      },
+      {
+        "name": "Copenhegan",
+        "lat": 55.676,
+        "long": 12.568,
+        "flag_colors": ["#ed2d27", "#f7fcfb"]
+      },
+      {
+        "name": "Reykjavík",
+        "lat": 64.147,
+        "long": -21.940,
+        "flag_colors": ["#06569c", "#e41d39", "#ffffff"]
+      },
+      {
+        "name": "Tórshavn",
+        "lat": 62.010,
+        "long": -6.774,
+        "flag_colors": ["#ffffff", "#eb2a3a", "#477cb6"]
+      },
+      {
+        "name": "Nuuk",
+        "lat": 64.174,
+        "long": -51.737,
+        "flag_colors": ["#f7fcfb", "#ed2d27"]
+      },
+      {
+        "name": "Mariehamn",
+        "lat": 60.097,
+        "long": 19.935,
+        "flag_colors": ["#2a4c8f", "#e22130", "#fbdd0f"]
+      }
+    ]
+}
